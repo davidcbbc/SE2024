@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#000000"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <!-- Left Side Bar and Roulette Table Container -->
+    <RelativeLayout
+        android:id="@+id/container_betting_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Betting Information TextView -->
+        <TextView
+            android:id="@+id/text_betting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/container_left_and_roulette"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <!-- Button Zero -->
+            <Button
+                android:id="@+id/btn_0"
+                style="@style/GreenButton"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:backgroundTint="#348309"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="0"
+                android:textSize="30sp"
+                app:cornerRadius="0dp"
+                tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Buttons for Column 1 -->
+                    <Button
+                        android:id="@+id/btn_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#000000"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="1"
+                        android:textSize="30sp"
+                        app:cornerRadius="0dp"
+                        tools:ignore="HardcodedText,NestedWeights,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/btn_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FE0000"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="4"
+                        android:textSize="30sp"
+                        app:cornerRadius="0dp"
+                        tools:ignore="HardcodedText,NestedWeights,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/btn_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#000000"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="7"
+                        android:textSize="30sp"
+                        app:cornerRadius="0dp"
+                        tools:ignore="HardcodedText,NestedWeights,VisualLintButtonSize" />
+
+                </LinearLayout>
+
+                <!-- Column 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Buttons for Column 2 -->
+                    <Button
+                        android:id="@+id/btn_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FE0000"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="2"
+                        android:textSize="30sp"
+                        app:cornerRadius="0dp"
+                        tools:ignore="HardcodedText,NestedWeights,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/btn_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#000000"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="5"
+                        android:textSize="30sp"
+                        app:cornerRadius="0dp"
+                        tools:ignore="HardcodedText,NestedWeights,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/btn_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FD0000"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="8"
+                        android:textSize="30sp"
+                        app:cornerRadius="0dp"
+                        tools:ignore="HardcodedText,NestedWeights,VisualLintButtonSize" />
+
+                </LinearLayout>
+
+                <!-- Column 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Buttons for Column 3 -->
+                    <Button
+                        android:id="@+id/btn_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#000000"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="3"
+                        android:textSize="30sp"
+                        app:cornerRadius="0dp"
+                        tools:ignore="HardcodedText,NestedWeights,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/btn_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#FE0000"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="6"
+                        android:textSize="30sp"
+                        app:cornerRadius="0dp"
+                        tools:ignore="HardcodedText,NestedWeights,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/btn_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#000000"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="9"
+                        android:textSize="30sp"
+                        app:cornerRadius="0dp"
+                        tools:ignore="HardcodedText,NestedWeights,VisualLintButtonSize" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Betting Information TextView -->
+
+    <!-- Left Side Bar for Betting on Black or Red -->
+
+    <LinearLayout
+        android:id="@+id/left_side_bar"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal">
+
+        <!-- Button for Betting on Black -->
+        <Button
+            android:id="@+id/btn_black"
+            style="@style/BlackButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Black"
+            android:textSize="30sp"
+            app:cornerRadius="0dp"
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+        <!-- Button for Betting on Red -->
+        <Button
+            android:id="@+id/btn_red"
+            style="@style/RedButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Red"
+            android:textSize="30sp"
+            app:cornerRadius="0dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</LinearLayout>

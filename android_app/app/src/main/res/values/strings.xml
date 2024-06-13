@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">final_se</string>
+    <string name="betting">Betting</string>
+    <string name="livestream">Livestream</string>
+    <string name="account">Account</string>
+    <string name="ip">192.168.175.57:5000</string>
+</resources>
