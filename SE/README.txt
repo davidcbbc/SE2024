@@ -1,92 +1,45 @@
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-IGNORAR FICHEIROS: .l.         .l.           .l.
-templates                 .l.       .l.
-program.py           .l.       .l.        .l.
-iniciar.txt      .l.                       .l.
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Instalar SQLite sqlite3
-Instalar Postman
-
-ver vídeo: https://www.youtube.com/watch?v=zcYMB-uXKNs&t=523s&ab_channel=NazmusNasir
-
-depois de seguir os passos do vídeo:
-(alguns comandos/passos do vídeo)
-comandos no terminal da pasta
-$ . venv/bin/activate
-$ export FLASK_APP=app.py
-$ flask run --debug --port=5001 (porta não importa pode ser qualquer numero, talvez)
----------------------------------------------------------------------------------------------------------------------------------
-o meu terminal:
----------------------------------------------------------------------------------------------------------------------------------
--->root@DESKTOP-IN9VUFF:/mnt/c/Users/bruno/OneDrive/Ambiente de Trabalho/SE# ls
-piApp
-
--->root@DESKTOP-IN9VUFF:/mnt/c/Users/bruno/OneDrive/Ambiente de Trabalho/SE# cd piApp/
-
--->root@DESKTOP-IN9VUFF:/mnt/c/Users/bruno/OneDrive/Ambiente de Trabalho/SE/piApp# ls
-app.py  DBSE.db  DBSE.db.sql  DBSE.sqbpro  iniciar.txt  program.py  __pycache__  templates  venv
-
--->root@DESKTOP-IN9VUFF:/mnt/c/Users/bruno/OneDrive/Ambiente de Trabalho/SE/piApp# . venv/bin/activate
-
--->(venv) root@DESKTOP-IN9VUFF:/mnt/c/Users/bruno/OneDrive/Ambiente de Trabalho/SE/piApp# export FLASK_APP=app.py
-
--->(venv) root@DESKTOP-IN9VUFF:/mnt/c/Users/bruno/OneDrive/Ambiente de Trabalho/SE/piApp# flask run --debug --port=5001
- * Serving Flask app 'app.py'
- * Debug mode: on
-WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on http://127.0.0.1:5001
-Press CTRL+C to quit
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 215-349-524
----------------------------------------------------------------------------------------------------------------------------------
-depois, abrir postman:
-meter http://127.0.0.1:5001/signup
-ou                         /login
-ou                         /add_balance
-ou			   /make_bet
-ou			   /get_my_data
-
-clicar em Body e em raw, selecionar JSON (print em SE/print.png)
-para ver a base de dados: abrir DB Browser(SQLite), clicar em open database, selecionar o ficheiro DBSE.db. ir a browse data e ver os dados. para atualizar os dados clicar no botão de atualizar msm em baixo do browse data (print em SE/print2.png)
-==================================================================================================================================
-/signup
-{
-    "name":"jaoo",
-    "email":"ko@ok.com",
-    "password": "123"
-}
-==================================================================================================================================
-/login
-{
-    "name":"jaoo",
-    "password": "123"
-}
-==================================================================================================================================
-/add_balance
-{
-    "users_id": 3,
-    "amount": 20   
-}
-==================================================================================================================================
-/make_bet
-{
-    "users_id": 3,
-    "amount": 20,
-    "RoulletNumber": 123
-}
-==================================================================================================================================
-/get_my_data
-{
-    "users_id": 3
-}
-
-==================================================================================================================================
-PARA TESTAR CLICAR EM SEND
-
-opa ya é isso acho eu
+ReadMe SE2024
 
 
+Instruções de Configuração e Utilização:
 
+1) Ligar os Componentes:
 
+Ligar o Raspberry Pi: Certifique-se de que o Raspberry Pi está ligado e a funcionar corretamente.
 
+Ligar a Aplicação no Telemóvel: Abra a aplicação no seu telemóvel.
+
+Ligar o Arduino: Conecte e ligue o Arduino.
+
+Conectar à mesma Rede de Internet: Certifique-se de que todos os componentes (Raspberry Pi, aplicação no telemóvel e Arduino) estão conectados à mesma rede de internet. No nosso caso, conectamo-nos ao ponto de acesso móvel de um telemóvel.
+
+2) Iniciar o Servidor no Raspberry Pi:
+
+Abrir o Terminal: No Raspberry Pi, abra o terminal.
+Execute o seguinte comando para iniciar o servidor e estabelecer a comunicação entre os componentes:
+
+$ python3 initiate_all.py
+
+Este comando inicia o servidor para a troca de mensagens entre o Raspberry Pi e a aplicação móvel, bem como a comunicação entre o Arduino e o Raspberry Pi. Também inicia o videostream da roleta e abre também a base de dados para ver os seus detalhes.
+
+3) Testar a Configuração:
+
+Criar uma Conta na Aplicação: Abra a aplicação no telemóvel e crie uma conta.
+
+Iniciar Sessão: Faça login na conta criada.
+
+Adicionar Saldo: Clicar em "account" -> "add balance" para adicionar saldo à sua conta.
+
+Fazer uma Aposta: Clique no botão "Betting", escolha um número da roleta e insira o montante desejado para apostar.
+
+Ver a Roleta a Girar: Para ver a roleta a girar, clique no botão "Livestream". Ai poderá ver a roleta a funcionar em tempo real.
+No fim da ronda, o dinheiro ganho será adicionado automaticamente à conta respetiva.
+
+4) Resolução de Possíveis Problemas
+
+Conexão de Rede:
+Verifique se todos os dispositivos estão na mesma rede.
+Reinicie o ponto de acesso móvel e tente novamente.
+Verifique a configuração dos parâmetros de rede definidos no código de cada componente (Raspberry Pi, Arduino e aplicação móvel).
+
+Considerações Finais: Certifique-se de que todos os passos acima foram seguidos corretamente para garantir que o sistema funcione sem problemas. Em caso de problemas, verifique as conexões de rede e a execução correta do comando no Raspberry Pi.
